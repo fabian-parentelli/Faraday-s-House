@@ -1,0 +1,15 @@
+.userForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    width: 300px;
+    background-color: rgba(128, 128, 128, 0.185);
+    padding: 12px;
+    border-radius: 6px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+}

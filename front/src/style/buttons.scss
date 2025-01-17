@@ -1,0 +1,21 @@
+@use './color.scss';
+
+.btn {
+    height: 30px;
+    width: 150px;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btnA {
+    background-color: color.$colorA;
+    color: #fff;
+
+    &:hover {
+        background-color: color.$colorAA;
+    }
+}

@@ -1,0 +1,52 @@
+$colorA: #0f1936;
+$colorB: #e6eeec;
+$colorC: #2990c8;
+$colorD: #2281bb;
+$colorE: #948c98;
+
+$colorAA: #23315c;
+
+.colA {
+    color: $colorA;
+}
+
+.backColA {
+    background-color: $colorA;
+}
+
+.colB {
+    color: $colorB;
+}
+
+.backColB {
+    background-color: $colorB;
+}
+
+.colC {
+    color: $colorC;
+}
+
+.backColC {
+    background-color: $colorC;
+}
+
+.colD {
+    color: $colorD;
+}
+
+.backColD {
+    background-color: $colorD;
+}
+
+.colE {
+    color: $colorE;
+}
+
+.backColE {
+    background-color: $colorE;
+}
+
+.pgray {
+    font-size: 12px;
+    color: gray;
+}
