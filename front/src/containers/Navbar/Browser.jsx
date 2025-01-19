@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import MenuIcon from '@mui/icons-material/Menu';
+import { IconMenu } from 'faradays_comp';
 import { useLoginContext } from '../../context/LoginContext.jsx';
 
 const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible }) => {
@@ -49,7 +49,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                     <a href='#' className='menu_link'>Plataforma <img src="/arrow.png" className="menu_arrow" /></a>
                     <ul className={`menu_nesting`}>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Códigos</Link></li>
-                        <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Ayudas</Link></li>
+                        <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Librerías</Link></li>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Iconos</Link></li>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Anotador</Link></li>
                     </ul>
@@ -64,14 +64,14 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                                 <li className='menu_inside registerId' onClick={handleInsideClick}><Link to={'/register'} className='menu_link menu_link--inside' href='#'>Registrarte</Link></li>
                             </>
                         }
-                        <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/profile'} className='menu_link menu_link--inside'>Panel</Link></li>
+                        <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/user_panel'} className='menu_link menu_link--inside'>Panel del usuario</Link></li>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={('/contactus')} className='menu_link menu_link--inside' >Contacto</Link></li>
                         {user.logged && <li className='menu_inside' onClick={handleInsideClick}><Link onClick={handleLogout} to={('/')} className='menu_link menu_link--inside' >Cerrar sesión</Link></li>}
                     </ul>
                 </li>
             </ul >
             <div className="menu_hamburguer" onClick={handleMenuClick}>
-                {/* <MenuIcon className="menu_img" fontSize='large' /> */}
+                <IconMenu color='#fff' size='100px' />
             </div>
         </div >
     );

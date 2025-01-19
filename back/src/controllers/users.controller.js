@@ -21,6 +21,16 @@ const login = async (req, res) => {
     };
 };
 
+const recoverPassword = async (req, res) => {
+    try {
+        const result = await userService.recoverPassword({ ...req.body });
+        if (result) return res.sendSuccess(result);
+    } catch (error) {
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+};
+
 const current = async (req, res) => {
     try {
         const result = await userService.current({ ...req.user });
@@ -31,5 +41,29 @@ const current = async (req, res) => {
     };
 };
 
+const interPass = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const result = await userService.interPass(id);
+        res.redirect(result);
+    } catch (error) {
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+};
 
-export { register, login, current };
+const newPassword = async (req, res) => {
+
+    console.log({...req.user});
+    
+
+    try {
+        const result = await userService.newPassword({ ...req.body }, { ...req.user });
+        if (result) return res.sendSuccess(result);
+    } catch (error) {
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+};
+
+export { register, login, recoverPassword, current, interPass, newPassword };

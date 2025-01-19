@@ -1,0 +1,15 @@
+.userPanelTopSearch {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    img {
+        width: 70px;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            filter: drop-shadow(5px 5px 5px black);
+        } 
+    }
+}

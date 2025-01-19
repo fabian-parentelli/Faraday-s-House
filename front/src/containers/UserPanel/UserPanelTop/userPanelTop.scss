@@ -1,0 +1,21 @@
+.userPanelTop {
+    min-height: 90px;
+    background-color: #242229;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6rem;
+
+    section {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .userPanelTop {
+        padding: 1rem;
+    }
+}

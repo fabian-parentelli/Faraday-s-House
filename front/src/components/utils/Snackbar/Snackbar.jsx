@@ -7,11 +7,11 @@ const Snackbar = ({ snack }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        if (snack.open) setIsVisible(true);
-        else {
-            const timeout = setTimeout(() => setIsVisible(false), 1000);
+        if (snack.open) {
+            setIsVisible(true);
+            const timeout = setTimeout(() => setIsVisible(false), 4000);
             return () => clearTimeout(timeout);
-        };
+        }
     }, [snack.open]);
 
     if (snack.open && snack.message) return (
@@ -26,6 +26,7 @@ const Snackbar = ({ snack }) => {
 };
 
 export default Snackbar;
+
 
 // This component receives an object with three properties:
 // open, a boolean value to control visibility,
