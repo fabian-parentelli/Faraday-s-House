@@ -1,7 +1,7 @@
 import './userPanelTopSearch.scss';
 import { Link } from 'react-router-dom';
 import { images } from '../../../../utils/images.js';
-import AutoComplete from '../../../../components/utils/AutoComplete/AutoComplete.jsx';
+import { AutoComplete } from 'faradays_comp';
 
 const UserPanelTopSearch = () => { // Supongo que este componenete será algo que redireccione a secciónes 
 
@@ -15,11 +15,12 @@ const UserPanelTopSearch = () => { // Supongo que este componenete será algo qu
 
     return (
         <div className='userPanelTopSearch'>
+            
             <Link to={'/'}>
                 <img src={images.ungryCat} alt="img" />
             </Link>
 
-            <AutoComplete options={options} labelKey="label" />
+            <AutoComplete options={options} labelKey='label'  />
         </div>
     );
 };

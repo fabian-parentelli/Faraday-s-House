@@ -106,6 +106,7 @@
 
 .menu_hamburguer {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 0 15px;
@@ -116,7 +117,8 @@
 @media (max-width: 767px) {
     .menu_hamburguer {
         display: flex;
-        width: 50px;
+        justify-content: end;
+        
     }
 
     .menu_item {
@@ -137,7 +139,7 @@
         position: fixed;
         max-width: 400px;
         width: 100%;
-        top: 70px;
+        top: 90px;
         bottom: 0;
         right: 0;
         background-color: #242424;
@@ -182,5 +184,12 @@
 
     .menu_img {
         color: color.$colorA;
+    }
+
+    .prentation {
+        p {
+            color: #fff;
+            font-size: 1rem;
+        }
     }
 }

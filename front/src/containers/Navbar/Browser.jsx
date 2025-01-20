@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IconMenu } from 'faradays_comp';
+import { IconBell, IconMenu } from 'faradays_comp';
 import { useLoginContext } from '../../context/LoginContext.jsx';
 
 const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible }) => {
@@ -71,7 +71,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                 </li>
             </ul >
             <div className="menu_hamburguer" onClick={handleMenuClick}>
-                <IconMenu color='#fff' size='100px' />
+                <IconMenu color='#fff' size='40px' />
             </div>
         </div >
     );

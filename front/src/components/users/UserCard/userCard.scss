@@ -1,0 +1,34 @@
+@import '../../../style/color.scss';
+
+.userCard {
+    width: 280px;
+    height: 400px;
+    background-color: #242229;
+    background: linear-gradient(to bottom, $colorD 25%, #242229 25%);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .userCardDivImg {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 100px;
+        width: 100px;
+        margin-top: 1rem;
+        border: solid 2px #ffff;
+
+        img {
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+    }
+}

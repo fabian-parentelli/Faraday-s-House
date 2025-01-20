@@ -13,3 +13,13 @@
         } 
     }
 }
+
+@media (max-width: 376px) {
+    .userPanelTopSearch {
+        padding: 14px;
+        
+        img {
+            display: none;
+        }
+    }
+}
