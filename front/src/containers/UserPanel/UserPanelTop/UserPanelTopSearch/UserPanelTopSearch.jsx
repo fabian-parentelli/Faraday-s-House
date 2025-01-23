@@ -1,17 +1,9 @@
 import './userPanelTopSearch.scss';
 import { Link } from 'react-router-dom';
 import { images } from '../../../../utils/images.js';
-import { AutoComplete } from 'faradays_comp';
+import SearchInPage from '../../../../components/utils/SearchInPage/SearchInPage.jsx';
 
-const UserPanelTopSearch = () => { // Supongo que este componenete será algo que redireccione a secciónes 
-
-    const options = [
-        { label: 'Apple', id: 1 },
-        { label: 'Banana', id: 2 },
-        { label: 'Orange', id: 3 },
-        { label: 'Grapes', id: 4 },
-        { label: 'Pineapple', id: 5 },
-    ];
+const UserPanelTopSearch = () => {
 
     return (
         <div className='userPanelTopSearch'>
@@ -20,7 +12,7 @@ const UserPanelTopSearch = () => { // Supongo que este componenete será algo qu
                 <img src={images.ungryCat} alt="img" />
             </Link>
 
-            <AutoComplete options={options} labelKey='label'  />
+            <SearchInPage />
         </div>
     );
 };

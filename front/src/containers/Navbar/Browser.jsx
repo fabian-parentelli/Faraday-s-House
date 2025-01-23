@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { IconBell, IconMenu } from 'faradays_comp';
+import {  IconMenu, AutoComplete } from 'faradays_comp';
 import { useLoginContext } from '../../context/LoginContext.jsx';
+import SearchInPage from '../../components/utils/SearchInPage/SearchInPage.jsx';
 
 const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible }) => {
 
@@ -31,7 +32,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
         <div className="browser">
             <div className='prentation'>
                 <Link to={'/'}><img src='https://res.cloudinary.com/dhv8bgdke/image/upload/v1720214935/background/fum4hvo048bnmzomdvs4.png' alt='Pasarela' /></Link>
-                <p>FARADAY'S HOUSE</p>
+                <SearchInPage />
             </div>
             <ul className={`menu_links ${menuVisible ? 'menu_links--show' : ''}`} ref={listElementsRef}>
 
@@ -65,7 +66,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                             </>
                         }
                         <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/user_panel'} className='menu_link menu_link--inside'>Panel del usuario</Link></li>
-                        <li className='menu_inside' onClick={handleInsideClick}><Link to={('/contactus')} className='menu_link menu_link--inside' >Contacto</Link></li>
+                        <li className='menu_inside' onClick={handleInsideClick}><a href={('#contact')} className='menu_link menu_link--inside' >Contacto</a></li>
                         {user.logged && <li className='menu_inside' onClick={handleInsideClick}><Link onClick={handleLogout} to={('/')} className='menu_link menu_link--inside' >Cerrar sesión</Link></li>}
                     </ul>
                 </li>

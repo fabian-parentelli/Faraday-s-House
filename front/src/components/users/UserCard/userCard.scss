@@ -1,10 +1,10 @@
-@import '../../../style/color.scss';
+@use '../../../style/color.scss';
 
 .userCard {
     width: 280px;
     height: 400px;
     background-color: #242229;
-    background: linear-gradient(to bottom, $colorD 25%, #242229 25%);
+    background: linear-gradient(to bottom, color.$colorD 25%, #242229 25%);
     border-radius: 1.5rem;
     padding: 1rem;
     display: flex;
