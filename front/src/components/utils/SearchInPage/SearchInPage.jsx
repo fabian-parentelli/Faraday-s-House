@@ -1,23 +1,54 @@
-import './searchInPage.scss';
-import {  AutoComplete } from 'faradays_comp';
+import { useEffect, useState } from 'react';
+import { AutoComplete } from 'faradays_comp';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useLoginContext } from '../../../context/LoginContext';
 
 const SearchInPage = () => {
 
-    const options = [
-        { label: 'Apple', id: 1 },
-        { label: 'Banana', id: 2 },
-        { label: 'Orange', id: 3 },
-        { label: 'Grapes', id: 4 },
-        { label: 'Pineapple', id: 5 },
-    ];
+    const navigate = useNavigate();
+    const location = useLocation();
+    const { user } = useLoginContext();
+    const [data, setData] = useState(null);
+    const [options, setOptions] = useState(optionsData);
 
-    return (
-        <div className='searchInPage'>
-            <AutoComplete options={options} labelKey='label' />
-        </div>
-    );
+    useEffect(() => {
+        if (data) {
+            const { link } = data;
+            if (link.includes('#')) {
+                const [path, hash] = link.split('#');
+                if (location.pathname === path) scrollToHash(hash);
+                else {
+                    navigate(path);
+                    setTimeout(() => scrollToHash(hash), 300);
+                };
+            } else navigate(link);
+        };
+        setData(null);
+    }, [data, navigate, location]);
+
+    const scrollToHash = (hash) => {
+        const element = document.getElementById(hash);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+        else console.warn(`Elemento con id="${hash}" no encontrado.`);
+    };
+
+    useEffect(() => {
+        if (user && user.logged && user.data.role !== 'user') {
+            const data = [...options];
+            data.push({ label: 'dashboard', id: 2, link: '/dashboard' })
+            setOptions(data);
+        };
+    }, [user]);
+
+    return <AutoComplete options={options} labelKey="label" setData={setData} />;
 };
 
 export default SearchInPage;
 
-// acá obtener el valor y que me lleve a la sección.
+const optionsData = [
+    // Página principal...
+    { label: 'pagina principal', id: 1, link: '/' },
+    { label: 'contacto', id: 1, link: '/#contact' },
+    // Panel del Usuario...
+    { label: 'panel del usuario', id: 2, link: '/user_panel' },
+];

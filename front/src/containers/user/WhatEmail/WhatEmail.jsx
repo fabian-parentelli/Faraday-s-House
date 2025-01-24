@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { images } from '../../../utils/images.js';
 import Loader from '../../../components/utils/Loader/Loader';
-import Snackbar from '../../../components/utils/SnackBar/SnackBar';
+import { Snackbar } from 'faradays_comp';
 import UserForm from '../../../components/users/UserForm/UserForm';
 import { recoverPassApi } from '../../../helpers/users/recoverPass.api.js';
 

@@ -4,7 +4,7 @@ import initializePassport from './config/passport.config.js';
 import mongoDB from './dao/mongo.js';
 import cors from 'cors';
 import env from './config/dotEnv.config.js';
-import  { userRouter } from './routes/index.router.js';
+import  { userRouter, messagesRouter } from './routes/index.router.js';
 
 const app = express();
 mongoDB();
@@ -17,5 +17,6 @@ initializePassport();
 app.use(passport.initialize());
 
 app.use('/api/user', userRouter);
+app.use('/api/messages', messagesRouter);
 
 app.listen(env.port, () => console.log('Server conected'));

@@ -1,15 +1,12 @@
 import './userCard.scss';
-import { images } from '../../../utils/images';
+import { images } from '../../../utils/images.js';
 
 const UserCard = ({ user }) => {
-
-    console.log(user);
-
 
     return (
         <div className='userCard'>
             <div className='userCardDivImg'>
-                <img src={images.userPreset} alt="img" />
+                <img src={images.happyCat} alt="img" />
             </div>
             <h2>{user.name}</h2>
             <p className='pgray'>{user.email}</p>

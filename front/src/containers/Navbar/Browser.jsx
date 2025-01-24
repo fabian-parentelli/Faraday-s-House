@@ -45,7 +45,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                         <li className='menu_inside' onClick={handleInsideClick}><Link to='/' className='menu_link menu_link--inside'>Noticias</Link></li>
                     </ul>
                 </li>
-
+                
                 <li className={`menu_item menu_item--show`} onClick={handleItemClick}>
                     <a href='#' className='menu_link'>Plataforma <img src="/arrow.png" className="menu_arrow" /></a>
                     <ul className={`menu_nesting`}>
@@ -59,13 +59,14 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                 <li className={`menu_item menu_item--show`} onClick={handleItemClick}>
                     <a href='#' className='menu_link'>Usuario<img src="/arrow.png" className="menu_arrow" /></a>
                     <ul className={`menu_nesting`}>
-                        {!user.logged &&
+                        {!user.logged ?
                             <>
                                 <li className='menu_inside loginDiv' onClick={handleInsideClick}><Link to={'/login'} className='menu_link menu_link--inside' >Iniciar Sesión</Link></li>
                                 <li className='menu_inside registerId' onClick={handleInsideClick}><Link to={'/register'} className='menu_link menu_link--inside' href='#'>Registrarte</Link></li>
                             </>
+                            : <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/user_panel'} className='menu_link menu_link--inside'>Panel del usuario</Link></li>
                         }
-                        <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/user_panel'} className='menu_link menu_link--inside'>Panel del usuario</Link></li>
+                        
                         <li className='menu_inside' onClick={handleInsideClick}><a href={('#contact')} className='menu_link menu_link--inside' >Contacto</a></li>
                         {user.logged && <li className='menu_inside' onClick={handleInsideClick}><Link onClick={handleLogout} to={('/')} className='menu_link menu_link--inside' >Cerrar sesión</Link></li>}
                     </ul>

@@ -8,6 +8,7 @@ import UserLogin from "../containers/user/UserLogin/UserLogin";
 import WhatEmail from "../containers/user/WhatEmail/WhatEmail";
 import NewPassword from "../containers/user/NewPassword/NewPassword";
 import UserPanel from "../containers/UserPanel/UserPanel";
+import DashBoard from "../containers/DashBoard/DashBoard";
 
 const RouterComp = () => {
 
@@ -22,15 +23,20 @@ const RouterComp = () => {
                 <Routes>
                     <Route path="/" element={<Body />} />
                     <Route path="/register" element={<UserRegister />} />
-                    <Route path="login" element={<UserLogin />} />
-                    <Route path="what_email" element={<WhatEmail />} />
-                    <Route path="password/:token" element={<NewPassword />} />
+                    <Route path="/login" element={<UserLogin />} />
+                    <Route path="/what_email" element={<WhatEmail />} />
+                    <Route path="/password/:token" element={<NewPassword />} />
 
                     {user.logged &&
                         <>
-                            <Route path="user_panel" element={<UserPanel />} />
+                            <Route path="/user_panel" element={<UserPanel />} />
+                            
+                            {user.data.role !== 'user' &&
+                                <Route path="/dashboard" element={<DashBoard />} />
+                            }
                         </>
                     }
+
                 </Routes>
 
             </ScrollToTop>

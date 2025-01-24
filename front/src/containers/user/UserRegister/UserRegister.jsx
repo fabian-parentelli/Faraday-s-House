@@ -1,11 +1,11 @@
 import './userRegister.scss';
+import { Snackbar } from 'faradays_comp';
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 import { images } from '../../../utils/images.js';
+import { Link, useNavigate } from 'react-router-dom';
 import Loader from '../../../components/utils/Loader/Loader.jsx';
 import { useLoginContext } from '../../../context/LoginContext.jsx';
 import UserForm from '../../../components/users/UserForm/UserForm.jsx';
-import Snackbar from '../../../components/utils/SnackBar/SnackBar.jsx';
 
 const UserRegister = () => {
 
@@ -25,7 +25,7 @@ const UserRegister = () => {
             setTimeout(() => { setSnack({ open: false, message: '', status: '' }) }, 2000);
         };
         if (user.registered) {
-            setSnack({ open: true, message: 'Registro exitos', status: '' })
+            setSnack({ open: true, message: 'Registro exitos', status: 'success' });
             const path = localStorage.getItem('path');
             if (path) {
                 localStorage.removeItem('path');

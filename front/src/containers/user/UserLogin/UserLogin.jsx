@@ -1,9 +1,9 @@
 import './userLogin.scss';
+import { Snackbar } from 'faradays_comp';
 import { useState, useEffect } from 'react';
 import { images } from '../../../utils/images.js';
 import { Link, useNavigate } from 'react-router-dom';
 import Loader from '../../../components/utils/Loader/Loader';
-import Snackbar from '../../../components/utils/SnackBar/SnackBar';
 import { useLoginContext } from '../../../context/LoginContext.jsx';
 import UserForm from '../../../components/users/UserForm/UserForm.jsx';
 
@@ -25,7 +25,7 @@ const UserLogin = () => {
             setTimeout(() => { setSnack({ open: false, message: '', status: '' }) }, 2000);
         };
         if (user.registered) {
-            setSnack({ open: true, message: 'Inicio de sesión exitoso', status: '' });
+            setSnack({ open: true, message: 'Inicio de sesión exitoso', status: 'success' });
             const path = localStorage.getItem('path');
             if (path) {
                 localStorage.removeItem('path');

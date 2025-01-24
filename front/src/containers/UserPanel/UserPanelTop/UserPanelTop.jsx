@@ -41,7 +41,7 @@ const UserPanelTop = ({ user }) => {
                 <div className='lineHeight'></div>
 
                 {user.logged && user.role !== 'user' &&
-                    <Link className='userPanelTopIc'>
+                    <Link to={'/dashboard'} className='userPanelTopIc'>
                         <IconApp size='35px' color='#fff' />
                         <p>Admin</p>
                     </Link>

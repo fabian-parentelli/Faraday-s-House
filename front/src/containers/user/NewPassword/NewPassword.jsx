@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { images } from '../../../utils/images.js';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Loader from '../../../components/utils/Loader/Loader.jsx';
-import Snackbar from '../../../components/utils/SnackBar/SnackBar.jsx';
+import { Snackbar } from 'faradays_comp';
 import { updUserPassApi } from '../../../helpers/users/updUserPass.api.js';
 
 const NewPassword = () => {
@@ -29,7 +29,7 @@ const NewPassword = () => {
             setSnack({ open: true, message: response.error, status: 'error' });
         };
     };
-    
+
 
     return (
         <div className='newPassword'>
