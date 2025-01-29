@@ -1,0 +1,43 @@
+.dashIconBottomL {
+    background-color: #242229;
+    width: 234px;
+    height: 310px;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 6px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #322f38;
+        border-radius: 3px;
+    }
+
+    h4 {
+        text-decoration: underline;
+    }
+
+    .dashIconBottomLDiv {
+        display: flex;
+        justify-content: center;
+        margin-top: 12px;
+    }
+
+    section {
+        margin-top: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+       .dashIconBottomLIcons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+    }
+}

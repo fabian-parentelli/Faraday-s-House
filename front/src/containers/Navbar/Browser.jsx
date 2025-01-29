@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import {  IconMenu, AutoComplete } from 'faradays_comp';
 import { useLoginContext } from '../../context/LoginContext.jsx';
 import SearchInPage from '../../components/utils/SearchInPage/SearchInPage.jsx';
@@ -67,7 +67,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                             : <li className='menu_inside updateUserDiv' onClick={handleInsideClick}><Link to={'/user_panel'} className='menu_link menu_link--inside'>Panel del usuario</Link></li>
                         }
                         
-                        <li className='menu_inside' onClick={handleInsideClick}><a href={('#contact')} className='menu_link menu_link--inside' >Contacto</a></li>
+                        <li className='menu_inside' onClick={handleInsideClick}><Link to={('/#contact')} className='menu_link menu_link--inside' >Contacto</Link></li>
                         {user.logged && <li className='menu_inside' onClick={handleInsideClick}><Link onClick={handleLogout} to={('/')} className='menu_link menu_link--inside' >Cerrar sesión</Link></li>}
                     </ul>
                 </li>

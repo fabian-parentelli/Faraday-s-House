@@ -19,3 +19,12 @@
         background-color: color.$colorAA;
     }
 }
+
+.btnA {
+    background-color: color.$colorD;
+    color: #fff;
+
+    &:hover {
+        background-color: color.$colorC;
+    }
+}

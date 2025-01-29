@@ -32,7 +32,7 @@ const RouterComp = () => {
                             <Route path="/user_panel" element={<UserPanel />} />
                             
                             {user.data.role !== 'user' &&
-                                <Route path="/dashboard" element={<DashBoard />} />
+                                <Route path="/dashboard/:param?" element={<DashBoard />} />
                             }
                         </>
                     }

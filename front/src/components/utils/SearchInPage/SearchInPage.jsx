@@ -21,7 +21,7 @@ const SearchInPage = () => {
                     navigate(path);
                     setTimeout(() => scrollToHash(hash), 300);
                 };
-            } else navigate(link);
+            } else navigate(link)
         };
         setData(null);
     }, [data, navigate, location]);
@@ -36,6 +36,7 @@ const SearchInPage = () => {
         if (user && user.logged && user.data.role !== 'user') {
             const data = [...options];
             data.push({ label: 'dashboard', id: 2, link: '/dashboard' })
+            data.push({ label: 'crear iconos', id: 2, link: '/dashboard/icons' })
             setOptions(data);
         };
     }, [user]);

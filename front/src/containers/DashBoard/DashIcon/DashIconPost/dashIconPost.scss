@@ -1,0 +1,46 @@
+.dashIconPost {
+    display: flex;
+    gap: 2rem;
+
+    .dashIconPostForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #242229;
+        padding: 1rem;
+        width: 300px;
+        height: 120px;
+        border-radius: 6px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                font-size: 12px;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .dashIconPostCode {
+        width: 100%;
+        height: 120px;
+        background-color: #242229;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+
+        .dashIconPostDiv {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
