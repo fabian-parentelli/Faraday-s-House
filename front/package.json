@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "faradays_comp": "^2.0.5",
+    "faradays_comp": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.2",
     "react-router-hash-link": "^2.4.3",
+    "react-syntax-highlighter": "^15.6.1",
     "sass": "^1.83.4"
   },
   "devDependencies": {

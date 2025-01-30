@@ -48,8 +48,9 @@ export default SearchInPage;
 
 const optionsData = [
     // Página principal...
-    { label: 'pagina principal', id: 1, link: '/' },
-    { label: 'contacto', id: 1, link: '/#contact' },
+    { label: 'Pagina principal', id: 1, link: '/' },
+    { label: 'Contacto', id: 1, link: '/#contact' },
+    { label: 'Iconos', id: 1, link: '/vewicons' },
     // Panel del Usuario...
     { label: 'panel del usuario', id: 2, link: '/user_panel' },
 ];

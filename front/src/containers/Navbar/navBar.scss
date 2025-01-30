@@ -114,7 +114,8 @@
     display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
+
     .menu_hamburguer {
         display: flex;
         justify-content: end;
@@ -191,5 +192,11 @@
             color: #fff;
             font-size: 1rem;
         }
+    }
+}
+
+@media (max-width: 376px) {
+    .nav .prentation {
+        width: 250px;
     }
 }

@@ -9,6 +9,8 @@ import WhatEmail from "../containers/user/WhatEmail/WhatEmail";
 import NewPassword from "../containers/user/NewPassword/NewPassword";
 import UserPanel from "../containers/UserPanel/UserPanel";
 import DashBoard from "../containers/DashBoard/DashBoard";
+import Vewicons from "../containers/icons/VewIcons/VewIcons";
+import Footer from "../containers/Footer/Footer";
 
 const RouterComp = () => {
 
@@ -26,6 +28,7 @@ const RouterComp = () => {
                     <Route path="/login" element={<UserLogin />} />
                     <Route path="/what_email" element={<WhatEmail />} />
                     <Route path="/password/:token" element={<NewPassword />} />
+                    <Route path="/vewicons" element={<Vewicons />} />
 
                     {user.logged &&
                         <>
@@ -38,6 +41,8 @@ const RouterComp = () => {
                     }
 
                 </Routes>
+
+                <Footer />
 
             </ScrollToTop>
         </BrowserRouter>

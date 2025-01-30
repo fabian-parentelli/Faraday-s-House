@@ -29,7 +29,7 @@ const DashIconPost = ({ counter, setCounter }) => {
                     <label>Nómbre del ícono</label>
                     <input type="text" placeholder='Nombre exacto del Icono' onChange={handleChage} value={values || ''} />
                 </div>
-                <button className='btn btnA'>{loading ? <Spinner size='25px' color='black' /> : 'Agregar'}</button>
+                <button className='btn btnB'>{loading ? <Spinner size='25px' color='black' /> : 'Agregar'}</button>
             </form>
 
             <div className="dashIconPostCode">

@@ -51,7 +51,7 @@ const Browser = ({ handleMenuClick, menuVisible, listElementsRef, setMenuVisible
                     <ul className={`menu_nesting`}>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Códigos</Link></li>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Librerías</Link></li>
-                        <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Iconos</Link></li>
+                        <li className='menu_inside' onClick={handleInsideClick}><Link to={'/vewicons'} className='menu_link menu_link--inside'>Iconos</Link></li>
                         <li className='menu_inside' onClick={handleInsideClick}><Link to={'/'} className='menu_link menu_link--inside'>Anotador</Link></li>
                     </ul>
                 </li>
