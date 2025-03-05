@@ -1,0 +1,61 @@
+@import '../../style/color.css';
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 100%;
+}
+
+.navBar section {
+    display: flex;
+    align-items: center;
+}
+
+.navBar section img {
+    width: 50px;
+}
+
+.navBar section h1 {
+    font-size: 1rem;
+    color: var(--colorD);
+}
+
+.navBarSect {
+    gap: 1rem;
+}
+
+.navBarSect a {
+    text-decoration: none;
+    color: black;
+    transition: .3s ease-in-out;
+}
+
+.navBarSect a:hover {
+    color: var(--colorD);
+}
+
+.navBarDiv {
+    padding: 6px;
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.navBarDiv:hover {
+    background-color: rgba(128, 128, 128, 0.226);
+}
+
+@media (max-width: 767px) {
+
+    .navBar {
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -1,4 +1,4 @@
-import './app.scss';
+import './app.css';
 import RouterComp from './Router/Router';
 import LoginProvider from './context/LoginContext';
 
@@ -6,9 +6,7 @@ function App() {
 
   return (
     <LoginProvider>
-
       <RouterComp />
-
     </LoginProvider>
   );
 };

@@ -1,55 +1,48 @@
-import './navBar.scss';
-import Browser from './Browser.jsx';
-import React, { useEffect, useState, useRef } from 'react';
-import { useLoginContext } from '../../context/LoginContext.jsx';
+import './navBar.css';
+import { useState } from 'react';
+import { IconUser } from 'faradays_comp';
+import Nav from '../../components/Nav/Nav';
+import NavItems from '../../components/utils/NavItems/NavItems';
 
 const NavBar = () => {
 
-    const [startLocation, setStartLocation] = useState(0);
-    const [showNav, setShowNav] = useState(true);
-    const [menuVisible, setMenuVisible] = useState(false);
-
-    const { current } = useLoginContext(); 
-    
-    const listElementsRef = useRef(null);
-
-    useEffect(() => { current() }, []);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScroll = window.pageYOffset;
-            currentScroll > startLocation ? setShowNav(false) : setShowNav(true);
-            setStartLocation(currentScroll);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [startLocation]);
-
-    useEffect(() => {
-        const handleResize = () => {
-            window.innerWidth > 767 && setMenuVisible(false);
-        };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const handleMenuClick = () => setMenuVisible(!menuVisible);
-
-    const navStyle = {
-        transition: 'top 0.3s',
-        top: showNav ? '0' : '-100px',
-    };
+    const [data, setData] = useState(null);
 
     return (
-        <div className={`nav`} style={navStyle}>
-            <Browser
-                handleMenuClick={handleMenuClick}
-                menuVisible={menuVisible}
-                listElementsRef={listElementsRef}
-                setMenuVisible={setMenuVisible}
-            />
-        </div>
+        <Nav>
+            <div className='navBar'>
+
+                <section>
+                    <img src="/logo.png" alt="img" />
+                    <h1>La Casa de<br />Faraday</h1>
+                </section>
+
+                <section className='navBarSect'>
+                    <NavItems title='Productos' items={items} setData={setData} />
+                    <NavItems title='Plataforma' items={apps} setData={setData} />
+                    <a href="">Contacto</a>
+
+                    <div className='navBarDiv'>
+                        <IconUser size='20px' />
+                    </div>
+                </section>
+
+            </div>
+        </Nav>
     );
 };
 
 export default NavBar;
+
+const items = [
+    { label: 'Componentes' },
+    { label: 'CataWeb' },
+    { label: 'UnderPass' },
+    { label: 'AudioFree' },
+];
+
+const apps = [
+    { label: 'Nosotros' },
+    { label: 'Noticias' },
+    { label: 'Próximamente' },
+];

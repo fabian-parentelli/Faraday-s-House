@@ -1,0 +1,9 @@
+.nav {
+    width: 100%;
+    min-height: 50px;
+    position: fixed;
+    top: 0;
+    transition: top .3s;
+    background-color: #eaebef;
+    z-index: 1001;
+}

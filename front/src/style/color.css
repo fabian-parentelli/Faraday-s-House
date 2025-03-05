@@ -1,0 +1,63 @@
+:root {
+    --colorA: #0f1936;
+    --colorB: #e6eeec;
+    --colorC: #2990c8;
+    --colorD: #2281bb;
+    --colorE: #948c98;
+    --colorG: #38a84c;
+    --colorAA: #23315c;
+}
+
+.colA {
+    color: var(--colorA);
+}
+
+.backColA {
+    background-color: var(--colorA);
+}
+
+.colB {
+    color: var(--colorB);
+}
+
+.backColB {
+    background-color: var(--colorB);
+}
+
+.colC {
+    color: var(--colorC);
+}
+
+.backColC {
+    background-color: var(--colorC);
+}
+
+.colD {
+    color: var(--colorD);
+}
+
+.backColD {
+    background-color: var(--colorD);
+}
+
+.colE {
+    color: var(--colorE);
+}
+
+.backColE {
+    background-color: var(--colorE);
+}
+
+.pgray {
+    font-size: 12px;
+    color: gray;
+}
+
+.adaaa {
+    color: #adaaaa;
+}
+
+.backAda {
+    background-color: #adaaaa;
+    ;
+}

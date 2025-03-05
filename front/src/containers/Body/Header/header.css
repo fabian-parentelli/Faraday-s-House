@@ -1,0 +1,40 @@
+@import '../../../style/color.css';
+
+.headerApp {
+    width: 100%;
+    min-height: 90vh;
+    background-image: url('/backHeader.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.headerApp img {
+    width: 400px;
+    object-fit: contain;
+    filter: drop-shadow(5px 5px 5px);
+}
+
+.headerAppSect {
+    color: var(--colorB);
+    background-color: rgba(128, 128, 128, 0.288);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.headerAppSect h1 {
+    color: var(--colorB);
+    font-size: 2rem;
+    margin-bottom: .4rem;
+}
+
+@media (max-width: 767px) {
+
+    .headerApp img {
+        width: 280px;
+    }
+}
