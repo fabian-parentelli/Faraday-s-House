@@ -1,0 +1,14 @@
+.navBarDiv {
+    padding: 6px;
+    background-color: rgba(128, 128, 128, 0.171);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.navBarDiv:hover {
+    background-color: #2280bb2c;
+}

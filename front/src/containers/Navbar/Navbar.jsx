@@ -1,7 +1,7 @@
 import './navBar.css';
 import { useState } from 'react';
-import { IconUser } from 'faradays_comp';
 import Nav from '../../components/Nav/Nav';
+import NavBarMenu from './NavBarMenu/NavBarMenu';
 import NavItems from '../../components/utils/NavItems/NavItems';
 
 const NavBar = () => {
@@ -13,8 +13,10 @@ const NavBar = () => {
             <div className='navBar'>
 
                 <section>
-                    <img src="/logo.png" alt="img" />
-                    <h1>La Casa de<br />Faraday</h1>
+                    <a href="/">
+                        <img src="/logo.png" alt="img" />
+                        <h1>La Casa de<br />Faraday</h1>
+                    </a>
                 </section>
 
                 <section className='navBarSect'>
@@ -22,9 +24,7 @@ const NavBar = () => {
                     <NavItems title='Plataforma' items={apps} setData={setData} />
                     <a href="">Contacto</a>
 
-                    <div className='navBarDiv'>
-                        <IconUser size='20px' />
-                    </div>
+                    <NavBarMenu />
                 </section>
 
             </div>

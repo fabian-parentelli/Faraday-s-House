@@ -13,11 +13,23 @@
     align-items: center;
 }
 
-.navBar section img {
+.navBar section a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.navBar section a:hover {
+    transform: scale(1.05);
+}
+
+.navBar section a img {
     width: 50px;
 }
 
-.navBar section h1 {
+.navBar section a h1 {
     font-size: 1rem;
     color: var(--colorD);
 }
@@ -34,21 +46,6 @@
 
 .navBarSect a:hover {
     color: var(--colorD);
-}
-
-.navBarDiv {
-    padding: 6px;
-    background-color: rgba(128, 128, 128, 0.171);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-}
-
-.navBarDiv:hover {
-    background-color: rgba(128, 128, 128, 0.226);
 }
 
 @media (max-width: 767px) {
