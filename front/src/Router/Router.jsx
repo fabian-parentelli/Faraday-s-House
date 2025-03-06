@@ -5,6 +5,7 @@ import NavBar from "../containers/NavBar/NavBar";
 import Body from "../containers/Body/Body";
 import Login from "../containers/users/Login/Login";
 import Register from "../containers/users/Register/Register";
+import Footer from "../containers/Footer/Footer";
 
 const RouterComp = () => {
 
@@ -21,6 +22,8 @@ const RouterComp = () => {
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                 </Routes>
+
+                <Footer />
 
             </ScrollToTop>
         </BrowserRouter>

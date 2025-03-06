@@ -1,0 +1,94 @@
+@import '../../style/color.css';
+
+.footer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--colorB);
+    padding: 4rem 6rem 1.4rem 6rem;
+}
+
+.footerSect a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--colorB);
+}
+
+.footerSect img {
+    width: 50px;
+}
+
+.footerSect h2 {
+    font-size: 2rem;
+}
+
+.footerList {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerList div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.footerList div a {
+    text-decoration: none;
+    color: var(--colorB);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.footerList div a:hover {
+    color: var(--colorD);
+}
+
+.footerSocial {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerSocial div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerSocial a {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+
+.footerSocial a:hover {
+    background-color: rgb(23, 37, 80);
+}
+
+.footerEnd {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerEnd div {
+    display: flex;
+    gap: 1rem;
+}
+
+.footerEnd div a {
+    text-decoration: none;
+    transition: .3s ease-in-out;
+}
+
+.footerEnd div a:hover {
+    color: rgb(151, 151, 151);
+}

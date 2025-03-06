@@ -8,7 +8,8 @@ const Header = () => {
 
             <section className='headerAppSect'>
                 <h1>La Casa de Farday</h1>
-                <p>Construyendo código por Fabián Parentelli.</p>
+                <p>Innovación que se adapta,</p>
+                <p style={{marginTop: '6px'}}>Tecnología que conecta.</p>
             </section>
 
         </div>
