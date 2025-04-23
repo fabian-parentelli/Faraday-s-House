@@ -1,48 +1,33 @@
 import './navBar.css';
-import { useState } from 'react';
-import Nav from '../../components/Nav/Nav';
-import NavBarMenu from './NavBarMenu/NavBarMenu';
-import NavItems from '../../components/utils/NavItems/NavItems';
+import { useEffect, useState } from 'react';
+import NavBarContent from './NavBarContent/NavBarcontent';
 
 const NavBar = () => {
 
-    const [data, setData] = useState(null);
+    const [startLocation, setStartLocation] = useState(0);
+    const [showNav, setShowNav] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScroll = window.pageYOffset;
+            currentScroll > startLocation ? setShowNav(false) : setShowNav(true);
+            setStartLocation(currentScroll);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [startLocation]);
+
+    const navStyle = {
+        transition: '0.3s',
+        top: showNav ? '0' : '-100px',
+        boxShadow: showNav && startLocation > 0 ? '1px 1px 3px rgba(0, 0, 0, 0.1)' : 'none'
+    };
 
     return (
-        <Nav>
-            <div className='navBar'>
-
-                <section>
-                    <a href="/">
-                        <img src="/logo.png" alt="img" />
-                        <h1>La Casa de<br />Faraday</h1>
-                    </a>
-                </section>
-
-                <section className='navBarSect'>
-                    <NavItems title='Productos' items={items} setData={setData} />
-                    <NavItems title='Plataforma' items={apps} setData={setData} />
-                    <a href="">Contacto</a>
-
-                    <NavBarMenu />
-                </section>
-
-            </div>
-        </Nav>
+        <div className='navBar' style={navStyle}>
+            <NavBarContent />
+        </div>
     );
 };
 
 export default NavBar;
-
-const items = [
-    { label: 'Componentes' },
-    { label: 'CataWeb' },
-    { label: 'UnderPass' },
-    { label: 'AudioFree' },
-];
-
-const apps = [
-    { label: 'Nosotros' },
-    { label: 'Noticias' },
-    { label: 'Próximamente' },
-];

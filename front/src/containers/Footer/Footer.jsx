@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
     return (
-        <div className='footer bg-container'>
+        <div className='footer'>
 
             <section className='footerSect'>
                 <Link to={'/'}>

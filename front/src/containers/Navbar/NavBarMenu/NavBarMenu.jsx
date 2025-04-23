@@ -1,17 +1,38 @@
 import './navBarMenu.css';
-import { Link } from 'react-router-dom';
-import { IconUser } from 'faradays_comp';
+import { useState, useRef, useEffect } from 'react';
+import { imgUrl } from '../../../utils/images.utils.js';
+import NavBatMenuData from './NavBarMenuData/NavBarMenuData.jsx';
+import NavBarMenuLinks from './NavBarMenuLinks/NavBarmenuLinks.jsx';
+import NavBarMenuWallet from './NavBarMenuWallet/NavBarMenuWallet.jsx';
+import NavBarMenuEnd from './NavBarMenuEnd/NavBarMenuEnd.jsx';
 
-const NavBarMenu = () => {
+const NavBarMenu = ({ user }) => {
 
-    // trabajar -- Si esta logeado que me lleve al menu del usuario.
+    const containerRef = useRef(null);
+    const [open, setOpen] = useState(false);
+
+    const handleClickOutside = (event) => {
+        if (containerRef.current && !containerRef.current.contains(event.target)) setOpen(false);
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleClickOutside);
+        return () => document.removeEventListener('click', handleClickOutside);
+    }, []);
 
     return (
-        <div className='navBarMenu'>
+        <div className='navBarMenu' ref={containerRef}>
 
-            <Link to={'/login'} className='navBarDiv'>
-                <IconUser size='20px' />
-            </Link>
+            <div className='navBarMenuPortal' onClick={() => setOpen(!open)}>
+                <img src='/catWriting.png' alt="img" />
+            </div>
+
+            <section className={open ? 'menuItemVewOpen' : 'menuItemVewClosed'} onClick={() => setOpen(!open)}>
+                <NavBatMenuData user={user} />
+                <NavBarMenuLinks />
+                <NavBarMenuWallet />
+                <NavBarMenuEnd />
+            </section>
 
         </div>
     );

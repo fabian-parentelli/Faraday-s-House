@@ -8,6 +8,9 @@
     justify-content: space-between;
     color: var(--colorB);
     padding: 4rem 6rem 1.4rem 6rem;
+
+    background: #0F1936;
+    background: linear-gradient(90deg, rgba(15, 25, 54, 1) 0%, rgba(35, 49, 92, 1) 100%);
 }
 
 .footerSect a {
@@ -52,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footerSocial div {
@@ -91,4 +95,16 @@
 
 .footerEnd div a:hover {
     color: rgb(151, 151, 151);
+}
+
+@media (max-width: 767px) {
+
+    .footer {
+        gap: 2rem;
+    }
+
+    .footerSocial {
+        gap: 2rem;
+    }
+
 }

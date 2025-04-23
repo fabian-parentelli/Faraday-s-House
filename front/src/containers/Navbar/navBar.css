@@ -1,58 +1,9 @@
-@import '../../style/color.css';
-
 .navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    height: 100%;
-}
-
-.navBar section {
-    display: flex;
-    align-items: center;
-}
-
-.navBar section a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: .3s ease-in-out;
-    cursor: pointer;
-}
-
-.navBar section a:hover {
-    transform: scale(1.05);
-}
-
-.navBar section a img {
-    width: 50px;
-}
-
-.navBar section a h1 {
-    font-size: 1rem;
-    color: var(--colorD);
-}
-
-.navBarSect {
-    gap: 1rem;
-}
-
-.navBarSect a {
-    text-decoration: none;
-    color: black;
-    transition: .3s ease-in-out;
-}
-
-.navBarSect a:hover {
-    color: var(--colorD);
-}
-
-@media (max-width: 767px) {
-
-    .navBar {
-        padding: 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    transition: top .3s;
+    background-color: #EAEBEF;
+    z-index: 1001;
 }

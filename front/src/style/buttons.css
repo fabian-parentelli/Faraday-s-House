@@ -1,7 +1,7 @@
 @import './color.css';
 
 .btn {
-    height: 30px;
+    height: 40px;
     width: 150px;
     border-radius: 3px;
     border: none;
@@ -26,5 +26,14 @@
 }
 
 .btnB:hover {
+    background-color: var(--colorC);
+}
+
+.btnC {
+    background-color: var(--colorD);
+    color: #fff;
+}
+
+.btnC:hover {
     background-color: var(--colorC);
 }
