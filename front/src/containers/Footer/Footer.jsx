@@ -1,75 +1,110 @@
 import './footer.css';
-import { IconFacebook, IconX, IconYoutube, IconLinkedin, IconInstagram, IconNpm, IconMap } from 'faradays_comp';
 import { Link } from 'react-router-dom';
+import FooterColumn from './FooterColumn/FooterColumn';
+import FooterSocial from './FooterSocial/FooterSocial';
 
 const Footer = () => {
 
     return (
         <div className='footer'>
 
-            <section className='footerSect'>
-                <Link to={'/'}>
-                    <img src="/logo.png" alt="img" />
-                    <h2>La casa de Faraday</h2>
-                </Link>
+            <Link to={'/'} className='footerA'>
+                <img src="/logo.png" width={'50px'} alt="carrot" />
+
+                <div className='navBarContentTitle'>
+                    <h4>Faraday</h4>
+                    <p>La casa de</p>
+                </div>
+            </Link>
+
+            <section className='footerTop'>
+                <FooterColumn data={columnA} />
+                <FooterColumn data={columnB} />
+                <FooterColumn data={columnC} />
+                <FooterColumn data={columnD} />
             </section>
 
-            <section className='footerList'>
+            <section className='footerBottom'>
 
-                <div>
-                    <h4>Productos</h4>
-                    <Link>Componentes</Link>
-                    <Link>CataWeb</Link>
-                    <Link>UnderPass</Link>
-                    <Link>AudioFree</Link>
+                <div className='footerBottomL'>
+                    <Link to={'/'}>
+                        <img src='/logo.png' width={'50px'} alt="logo" />
+                    </Link>
+                    <p className='footerBottomCata'>UnderPass</p>
+                    <FooterSocial />
                 </div>
 
-                <div>
-                    <h4>Plataforma</h4>
-                    <Link>Nosotros</Link>
-                    <Link>Noticias</Link>
-                    <Link>Próximamente</Link>
-                    <Link>Ayudas con el código</Link>
-                </div>
+                <div className='footerBottomL'>
+                    <p className='pgray'>© 2025 Faraday's House </p>
 
-                <div>
-                    <h4>Interacción</h4>
-                    <Link>Contacto</Link>
-                    <Link>Comentarios</Link>
+                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                        <img className='footerBottomImg' src='/logo.png' width='30px' alt="img" />
+                    </a>
+                    <p className='pgray'>Todos los derechos reservados.</p>
+
+                    <Link to={'/condition'} style={{ textDecoration: 'none' }}>
+                        <p className='pgray'>Términos y condicones</p>
+                    </Link>
+                    <p className='pgray'>|</p>
+
+                    <Link to={'/privacy'} style={{ textDecoration: 'none' }}>
+                        <p className='pgray'>Política de Privacidad</p>
+                    </Link>
                 </div>
 
             </section>
-
-            <section className='footerSocial'>
-
-                <div>
-                    <a href='' target='_blank'><IconFacebook color='#ffff' size='30px' /></a>
-                    <a href='https://x.com/FabianParentell' target='_blank'><IconX color='#ffff' size='30px' /></a>
-                    <a href='https://www.youtube.com/@FabianParentelli' target='_blank'><IconYoutube color='#ffff' size='30px' /></a>
-                    <a href='https://www.linkedin.com/in/fabian-parentelli-2608ba272' target='_blank'><IconLinkedin color='#ffff' size='30px' /></a>
-                    <a href='https://www.instagram.com/fabianparentelli/' target='_blank'><IconInstagram color='#ffff' size='30px' /></a>
-                </div>
-
-                <div>
-                    <a href="https://www.npmjs.com/package/faradays_comp?activeTab=readme" target='_blank'><IconNpm color='#ffff' size='30px' /></a>
-                    <p>Componentes NPM</p>
-                    <p></p>
-                    <a><IconMap color='#ffff' size='30px' /></a>
-                    <p>Buenos Aires - Argentina</p>
-                </div>
-            </section>
-
-            <section className='footerEnd'>
-                <p className='pgray'>© 2025 Fabián Parentelli</p>
-
-                <div>
-                    <Link className='pgray'>Privacidad</Link>
-                    <Link className='pgray'>Términos y condiciones</Link>
-                </div>
-            </section>
-
         </div>
     );
 };
 
 export default Footer;
+
+const columnA = {
+    title: 'UnderPass',
+    content: [
+        { text: 'Guia de funcionamiento', link: '/helps' },
+        { text: 'Qiénes somos', link: '/us' },
+        { text: 'Videos tutoriales ', link: '/videotut' },
+        { text: 'Noticias y Avances', link: '/ournews' },
+        { text: 'Próximamente en UnderPass', link: '/future' },
+        { text: 'Preguntas frecuentes', link: '/asked' },
+    ]
+};
+
+const columnB = {
+    title: 'Plataforma',
+    content: [
+        { text: 'Crear eventos', link: '/newevents' },
+        { text: 'Presets para eventos', link: '/presets' },
+        { text: 'Contacto', link: '/contact' },
+        { text: 'Logotipos', link: '/logstype' },
+        { text: 'Precios', link: '/prices' },
+    ]
+};
+
+const columnC = {
+    title: 'Usuario',
+    content: [
+        { text: 'Iniciar sesión', link: '/login' },
+        { text: 'Registrate', link: '/register' },
+        { text: 'Configuración', link: '/panel' },
+        { text: 'Alertas', link: '/returns' },
+        { text: 'Mensajes', link: '/returns' },
+        { text: 'Actividad', link: '/history' },
+        { text: 'Arrepentimiento', link: '/repentance' },
+    ]
+};
+
+const columnD = {
+    title: 'Secciónes',
+    content: [
+        { text: 'UnderPass', link: '/' },
+        { text: 'UnderEvents', link: '/events' },
+        { text: 'UnderMarkets', link: '/products' },
+        { text: 'UnderSites', link: '/sites' },
+        { text: 'UnderShifts', link: '/shifts' },
+        { text: 'UnderNews', link: '/news' },
+        { text: 'UnderPay', link: '/pay' },
+        { text: 'UnderAd', link: '/ads' },
+    ]
+};

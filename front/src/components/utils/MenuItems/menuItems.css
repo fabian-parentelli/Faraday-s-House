@@ -1,14 +1,17 @@
+@import '../../../style/color.css';
+
 .menuItems {
     position: relative;
 }
 
 .menuItems p {
     cursor: pointer;
+    color: var(--colorB);
     transition: .3s ease-in-out;
 }
 
 .menuItems p:hover {
-    color: #aaaaaa;
+    color: var(--colorD);
 }
 
 .menuItems section {

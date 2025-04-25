@@ -6,7 +6,7 @@ const NavBatMenuData = ({ user }) => {
     return (
         <div className='navBatMenuData'>
             <div className='navBarMenuPortal'>
-                <img src='/catWriting.png' alt="img" />
+                <img src='/write.png' alt="img" />
             </div>
             <div>
                 <h4>{user.name}</h4>

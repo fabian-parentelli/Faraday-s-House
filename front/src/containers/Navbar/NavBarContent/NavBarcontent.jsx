@@ -17,13 +17,16 @@ const NavBarContent = () => {
         <div className='navBarContent'>
 
             <Link to={'/'}>
-                <img src="/carrot.png" alt="img" />
-                <h1>Under<span>Pass</span></h1>
+                <img src="/logo.png" alt="img" />
+                <div className='navBarContentTitle'>
+                    <h1>Faraday</h1>
+                    <p>La casa de</p>
+                </div>
             </Link>
 
             <section className='navBarContentSect'>
 
-                <MenuItems title='Información' list={informations} icons='info' />
+                <MenuItems title='Productos' list={informations} icons='info' />
                 <MenuItems title='Plataforma' list={apps} icons={'app'} />
 
                 {!user.logged ?
@@ -45,17 +48,14 @@ const NavBarContent = () => {
 export default NavBarContent;
 
 const informations = [
-    { text: 'Guia de funcionamiento', route: '/helps' },
-    { text: 'Quiénes somos', route: '/us' },
-    { text: 'Videos tutoriales', route: '/videotut' },
-    { text: 'Noticias y avances', route: '/ournews' },
-    { text: 'Próximamente en UnderPass', route: '/advance' },
-    { text: 'Preguntas frecuentes', route: '/asked' }
+    { text: 'Under Pass', route: '/underpass' },
+    { text: 'Catalina', route: '/cata' },
+    { text: 'Componentes', route: '/comp' },
+    { text: 'En desarrollo', route: '/dev' },
+    { text: 'Noticias', route: '/news' },
 ];
 
 const apps = [
-    { text: 'Crear eventos', route: '/newevent' },
-    { text: 'Presets para eventos', route: '/presets' },
     { text: 'Ponerme en contacto', route: '/contact' },
     { text: 'Logotipos', route: '/logstype' },
     { text: 'Precios', route: '/prices' },

@@ -9,7 +9,7 @@ const NavBarMenuLinks = () => {
 
             <Link to={'/panel'}>
                 <Icons type='dashboard' color='gray' size='25px' />
-                <p>Configuración</p>
+                <p>Panel</p>
             </Link>
 
             <Link to={'/favorites'}>

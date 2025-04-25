@@ -1,6 +1,5 @@
 import './navBarMenu.css';
 import { useState, useRef, useEffect } from 'react';
-import { imgUrl } from '../../../utils/images.utils.js';
 import NavBatMenuData from './NavBarMenuData/NavBarMenuData.jsx';
 import NavBarMenuLinks from './NavBarMenuLinks/NavBarmenuLinks.jsx';
 import NavBarMenuWallet from './NavBarMenuWallet/NavBarMenuWallet.jsx';
@@ -24,7 +23,7 @@ const NavBarMenu = ({ user }) => {
         <div className='navBarMenu' ref={containerRef}>
 
             <div className='navBarMenuPortal' onClick={() => setOpen(!open)}>
-                <img src='/catWriting.png' alt="img" />
+                <img src='/write.png' alt="img" />
             </div>
 
             <section className={open ? 'menuItemVewOpen' : 'menuItemVewClosed'} onClick={() => setOpen(!open)}>

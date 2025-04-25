@@ -9,7 +9,7 @@
 .navBarMenuPortal {
     width: 50px;
     height: 50px;
-    background-color: var(--colorG);
+    background-color: var(--colorB);
     display: flex;
     align-items: center;
     justify-content: center;

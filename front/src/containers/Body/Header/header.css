@@ -6,20 +6,21 @@
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 2rem;
     background: linear-gradient(90deg, rgba(15, 25, 54, 1) 0%, rgba(35, 49, 92, 1) 100%);
 }
 
 .headerApp img {
-    max-width: 600px;
+    max-width: 450px;
     width: 60%;
     object-fit: contain;
     filter: drop-shadow(5px 5px 5px);
 }
 
 .headerAppSect {
+    width: 45%;
     min-height: 80vh;
     color: var(--colorB);
     padding: 1rem;
@@ -30,13 +31,14 @@
 }
 
 .headerAppSect p {
-    max-width: 60%;
+    max-width: 300px;
+    width: 70%;
     line-height: 2;
 }
 
 .headerAppSect h2 {
     color: var(--colorB);
-    font-size: 3rem;
+    font-size: 2.6rem;
     margin-bottom: .4rem;
 }
 
@@ -49,14 +51,26 @@
 @media (max-width: 768px) {
 
     .headerApp .headerAppSect {
+        width: 100%;
         align-items: center;
         gap: 1rem;
     }
+
     .headerApp .headerAppSect h2 {
         text-align: center;
+        font-size: 2rem;
     }
 
     .headerApp img {
         width: 60%;
+    }
+
+    .headerAppSect .headerAppSectButtons {
+        justify-content: center;
+    }
+
+    .headerApp .headerAppSect p {
+        width: 100%;
+        text-align: center;
     }
 }

@@ -1,0 +1,45 @@
+@import '../../../style/color.css';
+
+.footerColumn {
+    color: white;
+}
+
+.footerColumnText {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.footerColumnText p {
+    color: var(--colorB);
+    transition: .3s ease-in-out;
+}
+
+.footerColumnText p:hover {
+    color: var(--colorC);
+}
+
+.footerColumnPCMobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .footerColumnPC {
+        display: none;
+    }
+
+    .footerColumnPCMobile {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footerColumnPCMobile details {
+        border-bottom: 1px solid #8080803a;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+}
