@@ -1,13 +1,19 @@
 import './navBarMenuLinks.css';
 import { Link } from 'react-router-dom';
 import Icons from '../../../../components/Icons/Icons';
+import { useLoginContext } from '../../../../context/LoginContext';
 
 const NavBarMenuLinks = () => {
+
+    const { user } = useLoginContext();
+
+    console.log(user.data);
+    
 
     return (
         <div className='navBarMenuLinks'>
 
-            <Link to={'/panel'}>
+            <Link to={user.data.role !== 'user' ? '/dashboard' : '/panel'}>
                 <Icons type='dashboard' color='gray' size='25px' />
                 <p>Panel</p>
             </Link>

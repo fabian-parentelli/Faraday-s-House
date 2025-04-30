@@ -1,0 +1,23 @@
+.theBooks {
+    margin-top: 70px;
+}
+
+.theBooks .theBooksTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85vh;
+}
+
+.theBooks .theBooksTitle h2 {
+    font-size: 3rem;
+}
+.theBooks .theBooksTitle p {
+    width: 50%;
+    text-align: center;
+    line-height: 2;
+    margin-top: 1rem;
+    color: #23315c;
+    font-weight: 600;
+}

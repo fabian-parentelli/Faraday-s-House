@@ -56,6 +56,7 @@ const informations = [
 ];
 
 const apps = [
+    { text: 'The Book', route: '/thebook' },
     { text: 'Ponerme en contacto', route: '/contact' },
     { text: 'Logotipos', route: '/logstype' },
     { text: 'Precios', route: '/prices' },

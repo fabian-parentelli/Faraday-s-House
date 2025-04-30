@@ -10,21 +10,26 @@ import ComputerIcon from './Paths/ComputerIcon';
 import CopyIcons from './Paths/CopyIcons';
 import Crediticon from './Paths/CreditIcon';
 import CrossIcon from './Paths/CrossIcon';
+import CssIcon from './Paths/Css';
 import DashboardIcon from './Paths/DashboardIcon';
 import DeleteIcon from './Paths/DeleteIcon';
 import DoorIcon from './Paths/DoorIcon';
 import DownIcon from './Paths/DownIcon';
 import EventIcon from './Paths/EventIcon';
 import FacebookIcon from './Paths/FacebookIcon';
+import HtmlIcon from './Paths/HtmlIcon';
 import ImageIcon from './Paths/ImageIcon';
 import InfoIcon from './Paths/InfoIcon';
 import InstagramIcon from './Paths/Instagram';
+import JsIcon from './Paths/JavaScript';
 import MapIcon from './Paths/MapIcon';
 import MessageIcon from './Paths/MessageIcon';
+import MongoIcon from './Paths/MongoIcon';
 import NotCreditIcon from './Paths/NotCreditIcon';
 import NotImageIcon from './Paths/NotImage';
 import PadLockIcon from './Paths/PadlockIcon';
 import PdfIcon from './Paths/PdfIcon';
+import ReactIcon from './Paths/ReactIcon';
 import ReportIcon from './Paths/ReportIcon';
 import RunIcon from './Paths/RunIcon';
 import ShirtIcon from './Paths/ShirtIcon';
@@ -98,6 +103,14 @@ const Icons = ({ color = '#000', size = '30px', onClick, backCol = 'none', bold 
             {type === 'event' && <EventIcon />}
             {type === 'video' && <VideoIcon />}
             {type === 'arrows' && <ArrowsIcon />}
+
+            {/* Soacials media */}
+
+            {type === 'mongo' && <MongoIcon />}
+            {type === 'react' && <ReactIcon />}
+            {type === 'js' && <JsIcon />}
+            {type === 'css' && <CssIcon />}
+            {type === 'html' && <HtmlIcon />}
         </svg>
     );
 };
